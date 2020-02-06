@@ -15,9 +15,10 @@ public class MyObjectMapper {
 
     public static void main(String[] args) throws XPathExpressionException, IOException, SAXException, ParserConfigurationException {
 
+        File xmlFile = new File("/Users/michael/Documents/HeartRateData/docs/export.xml");
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
-        Document doc = builder.parse(new FileInputStream((new File("/Users/michael/Documents/HeartRateData/docs/export.xml"))));
+        Document doc = builder.parse(xmlFile);
         XPathFactory xPathFactory = XPathFactory.newInstance();
         XPath xpath = xPathFactory.newXPath();
         String expression;
